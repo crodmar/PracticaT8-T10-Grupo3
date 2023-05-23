@@ -55,5 +55,29 @@ public class TiendaVideojuegos {
 		}
 		return juegosPorPlataforma;
 	}
+	
+	 public Videojuego obtenerJuegoMasCaro() {
+	        Videojuego juegoMasCaro = null;
+	        double precioMaximo = Double.MIN_VALUE;
+	        for (Videojuego juego : inventario) {
+	            if (juego.getPrecio() > precioMaximo) {
+	                precioMaximo = juego.getPrecio();
+	                juegoMasCaro = juego;
+	            }
+	        }
+	        return juegoMasCaro;
+	    }
+	 
+	 public Videojuego obtenerJuegoMasBarato() {
+	        Videojuego juegoMasBarato = null;
+	        double precioMinimo = Double.MAX_VALUE;
+	        for (Videojuego juego : inventario) {
+	            if (juego.getPrecio() < precioMinimo) {
+	                precioMinimo = juego.getPrecio();
+	                juegoMasBarato = juego;
+	            }
+	        }
+	        return juegoMasBarato;
+	    }
 
 }
