@@ -7,6 +7,12 @@ public class Videojuego implements Comparable{
 	private String plataforma;
 	private double precio;
 	
+	public Videojuego() {
+		this.titulo = "generico";
+		this.genero = "generico";
+		this.plataforma = "generico";
+		this.precio = 1;
+	}
 	
 	public Videojuego(String titulo, String genero, String plataforma, double precio) {
 		this.titulo = titulo;
