@@ -69,6 +69,6 @@ public class Cliente implements Comparable{
 		return this.getNombre().compareTo(otro.getNombre());
 	}
 	
-	//a
+	
 	
 }
