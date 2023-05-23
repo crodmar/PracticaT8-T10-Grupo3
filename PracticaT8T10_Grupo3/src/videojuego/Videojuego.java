@@ -6,12 +6,14 @@ public class Videojuego implements Comparable{
 	private String genero;
 	private String plataforma;
 	private double precio;
+	private boolean entregado;
 	
 	public Videojuego() {
 		this.titulo = "generico";
 		this.genero = "generico";
 		this.plataforma = "generico";
 		this.precio = 1;
+		this.entregado = false;
 	}
 	
 	public Videojuego(String titulo, String genero, String plataforma, double precio) {
@@ -23,7 +25,7 @@ public class Videojuego implements Comparable{
 		} else {
 			throw new ArithmeticException("El precio debe ser mayor que 0");
 		}
-		
+		this.entregado = false;
 	}
 
 
@@ -70,11 +72,20 @@ public class Videojuego implements Comparable{
 		}
 	}
 
+	
+	public boolean isEntregado() {
+		return entregado;
+	}
+
+	public void setEntregado(boolean entregado) {
+		this.entregado = entregado;
+	}
+
 
 	@Override
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", genero=" + genero + ", plataforma=" + plataforma + ", precio="
-				+ precio + "]";
+				+ precio + ", entregado=" + entregado + "]";
 	}
 
 	@Override
@@ -83,10 +94,11 @@ public class Videojuego implements Comparable{
         return this.getTitulo().equalsIgnoreCase(otro.getTitulo())
                 && this.getGenero().equalsIgnoreCase(otro.getGenero()) 
                 && this.getPlataforma().equalsIgnoreCase(otro.getPlataforma())
-                && this.getPrecio() == otro.getPrecio();
+                && this.getPrecio() == otro.getPrecio()
+        		&& this.isEntregado() == otro.isEntregado();
     }
-
 	
+
 	@Override
 	public int compareTo(Object arg0) {
 		Videojuego otro = (Videojuego) arg0;		
