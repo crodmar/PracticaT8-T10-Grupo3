@@ -1,8 +1,6 @@
 package videojuego;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -31,9 +29,31 @@ public class TiendaVideojuegos {
 
 	public void mostrarJuegosDisponibles() {
 
-		System.out.println(inventario);
+		System.out.println("Juegos disponibles en la tienda:");
+		for (Videojuego juego : inventario) {
+			System.out.println(juego.getTitulo());
 
 		}
 	}
 
+	public List<Videojuego> buscarJuegosPorGenero(String genero) {
+		List<Videojuego> juegosPorGenero = new ArrayList<>();
+		for (Videojuego juego : inventario) {
+			if (juego.getGenero().equalsIgnoreCase(genero)) {
+				juegosPorGenero.add(juego);
+			}
+		}
+		return juegosPorGenero;
+	}
 
+	public List<Videojuego> buscarJuegosPorPlataforma(String plataforma) {
+		List<Videojuego> juegosPorPlataforma = new ArrayList<>();
+		for (Videojuego juego : inventario) {
+			if (juego.getPlataforma().equalsIgnoreCase(plataforma)) {
+				juegosPorPlataforma.add(juego);
+			}
+		}
+		return juegosPorPlataforma;
+	}
+
+}
