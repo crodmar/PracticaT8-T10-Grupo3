@@ -37,7 +37,8 @@ public class JuegoFisico extends Videojuego{
 
 	@Override
 	public String toString() {
-		return "JuegoFisico \n [estado=" + estado + ", disponibilidad=" + disponibilidad + "]";
+		return "JuegoFisico \n [titulo=" + super.getTitulo() + ", genero=" + super.getGenero() + ", plataforma=" + super.getPlataforma() + ", precio="
+				+ super.getPrecio() + ", estado=" + estado + ", disponibilidad=" + disponibilidad + "]";
 	}
 
 	@Override
