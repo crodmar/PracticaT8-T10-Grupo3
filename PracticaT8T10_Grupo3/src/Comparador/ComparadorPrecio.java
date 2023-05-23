@@ -16,5 +16,4 @@ public class ComparadorPrecio implements Comparator<Videojuego> {
             return 0;
         }
     }
-    //hola
 }
