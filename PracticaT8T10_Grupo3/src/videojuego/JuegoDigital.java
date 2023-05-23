@@ -23,6 +23,12 @@ public class JuegoDigital extends Videojuego implements Entregable {
 		return "JuegoFisico \n [titulo=" + super.getTitulo() + ", genero=" + super.getGenero() + ", plataforma="
 				+ super.getPlataforma() + ", precio=" + super.getPrecio() + ", tamanoGB" + getTamanoGB() + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    JuegoDigital juegoDigital = (JuegoDigital) obj;
+	    return super.equals(juegoDigital) && this.tamanoGB == juegoDigital.tamanoGB;
+	}
 
 	@Override
 	public void entregar(Cliente cliente) {
