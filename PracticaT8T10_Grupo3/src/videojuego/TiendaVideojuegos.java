@@ -19,7 +19,10 @@ public class TiendaVideojuegos {
 		this.inventario = inventario;
 	}
 	
+	public void agregarVideojuego(Videojuego videoJuego) {
 	
+		inventario.add(videoJuego);
 	   
 }
 
+}
