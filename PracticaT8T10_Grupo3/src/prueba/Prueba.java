@@ -6,6 +6,7 @@ import java.util.List;
 import videojuego.Cliente;
 import videojuego.JuegoDigital;
 import videojuego.JuegoFisico;
+import videojuego.TiendaVideojuegos;
 import videojuego.Videojuego;
 
 public class Prueba {
@@ -20,6 +21,16 @@ public class Prueba {
 		Cliente cliente1 = new Cliente("Pepe", "Calle Blasco Ibáñez, 1");
 		Cliente cliente2 = new Cliente("María", "Calle Kansas City, 2");
 		
+		TiendaVideojuegos tienda1 = new TiendaVideojuegos();
+		TiendaVideojuegos tienda2 = new TiendaVideojuegos();
+		
+		tienda1.agregarVideojuego(juegoFisico2);
+		tienda2.agregarVideojuego(juegoDigital2);
+		tienda1.agregarVideojuego(juegoDigital1);
+		tienda2.agregarVideojuego(juegoFisico1);
+		
+		System.out.println(tienda2.buscarJuegosPorGenero("Sandbox"));
+		System.out.println(tienda1.buscarJuegosPorGenero("Sandbox"));
 		
 	}
 }

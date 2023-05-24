@@ -42,8 +42,12 @@ public class TiendaVideojuegos {
 			if (juego.getGenero().equalsIgnoreCase(genero)) {
 				juegosPorGenero.add(juego);
 			}
+			else {
+				System.out.println("No se ha encontrado el género especificado");
+			}
 		}
 		return juegosPorGenero;
+		
 	}
 
 	public List<Videojuego> buscarJuegosPorPlataforma(String plataforma) {
