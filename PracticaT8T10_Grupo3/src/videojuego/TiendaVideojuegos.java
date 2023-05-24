@@ -36,29 +36,38 @@ public class TiendaVideojuegos {
 		}
 	}
 
-	public List<Videojuego> buscarJuegosPorGenero(String genero) {
+	public void buscarJuegosPorGenero(String genero) {
+		String resultado="";
 		List<Videojuego> juegosPorGenero = new ArrayList<>();
 		for (Videojuego juego : inventario) {
 			if (juego.getGenero().equalsIgnoreCase(genero)) {
 				juegosPorGenero.add(juego);
+				resultado="Se ha encontrado: "+juego;
 			}
 			else {
-				System.out.println("No se ha encontrado el género especificado");
+				resultado="No se ha encontrado juego de ese género.";
 			}
 		}
-		return juegosPorGenero;
+		
+		System.out.println(resultado);
 		
 	}
 
-	public List<Videojuego> buscarJuegosPorPlataforma(String plataforma) {
+	public void buscarJuegosPorPlataforma(String plataforma) {
+		String resultado="";
 		List<Videojuego> juegosPorPlataforma = new ArrayList<>();
 		for (Videojuego juego : inventario) {
 			if (juego.getPlataforma().equalsIgnoreCase(plataforma)) {
 				juegosPorPlataforma.add(juego);
-			}
+			resultado="Se ha encontrado: "+juego;
 		}
-		return juegosPorPlataforma;
+		else {
+			resultado="No se ha encontrado juego de esa plataforma.";
+		}
 	}
+	
+	System.out.println(resultado);
+}
 
 	public Videojuego obtenerJuegoMasCaro() {
 		Videojuego juegoMasCaro = null;

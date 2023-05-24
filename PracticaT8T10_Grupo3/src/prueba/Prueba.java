@@ -29,8 +29,13 @@ public class Prueba {
 		tienda1.agregarVideojuego(juegoDigital1);
 		tienda2.agregarVideojuego(juegoFisico1);
 		
-		System.out.println(tienda2.buscarJuegosPorGenero("Sandbox"));
-		System.out.println(tienda1.buscarJuegosPorGenero("Sandbox"));
+		tienda2.buscarJuegosPorGenero("Sandbox");
+		tienda1.buscarJuegosPorGenero("Sandbox");
+		
+		tienda2.buscarJuegosPorPlataforma("PC");
+		tienda1.buscarJuegosPorPlataforma("PS1");
+		
+		
 		
 	}
 }
