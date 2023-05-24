@@ -79,5 +79,15 @@ public class TiendaVideojuegos {
 	        }
 	        return juegoMasBarato;
 	    }
+	 
+	 public void venderJuego(Cliente cliente, Videojuego juego) {
+	        if (inventario.contains(juego)) {
+	            inventario.remove(juego);
+	            cliente.getVideojuegosComprados();
+	            System.out.println("El juego " + juego.getTitulo() + " ha sido vendido al cliente " + cliente.getNombre() + ".");
+	        } else {
+	            System.out.println("El juego " + juego.getTitulo() + " no está disponible en la tienda.");
+	        }
+	    }
 
 }
