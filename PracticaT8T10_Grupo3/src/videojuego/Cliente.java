@@ -16,7 +16,7 @@ public class Cliente implements Comparable{
 		this.videojuegosComprados = new LinkedList<>();
 	}
 	
-	public Cliente(String nombre, String direccion, List<Videojuego> videojuegosComprados) {
+	public Cliente(String nombre, String direccion) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.videojuegosComprados = new LinkedList<>();
@@ -43,10 +43,7 @@ public class Cliente implements Comparable{
 		return videojuegosComprados;
 	}
 
-	public void setVideojuegosComprados(List<Videojuego> videojuegosComprados) {
-		this.videojuegosComprados = videojuegosComprados;
-	}
-
+	
 	@Override
 	public String toString() {
 		return "Cliente [nombre=" + nombre + ", direccion=" + direccion + ", videojuegosComprados="
