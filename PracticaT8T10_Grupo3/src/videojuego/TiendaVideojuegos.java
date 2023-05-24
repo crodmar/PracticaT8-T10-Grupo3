@@ -96,7 +96,7 @@ public class TiendaVideojuegos {
 	public void venderJuego(Cliente cliente, Videojuego juego) {
 		if (inventario.contains(juego)) {
 			inventario.remove(juego);
-			cliente.getVideojuegosComprados();
+			cliente.setVideojuegosComprados(juego);
 			System.out.println(
 					"El juego " + juego.getTitulo() + " ha sido vendido al cliente " + cliente.getNombre() + ".");
 		} else {

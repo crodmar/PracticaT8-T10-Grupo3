@@ -35,7 +35,12 @@ public class Prueba {
 		tienda2.buscarJuegosPorPlataforma("PC");
 		tienda1.buscarJuegosPorPlataforma("PS1");
 		
+		tienda1.mostrarJuegosDisponibles();
+		tienda2.mostrarJuegosDisponibles();
 		
+		tienda1.venderJuego(cliente2, juegoFisico2);
+		tienda2.venderJuego(cliente1, juegoDigital2);
+		tienda2.venderJuego(cliente1, juegoFisico2);
 		
 	}
 }

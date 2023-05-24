@@ -42,8 +42,11 @@ public class Cliente implements Comparable{
 	public List<Videojuego> getVideojuegosComprados() {
 		return videojuegosComprados;
 	}
-
 	
+	public void setVideojuegosComprados(Videojuego videojuego) {
+		this.videojuegosComprados.add(videojuego);
+	}
+
 	@Override
 	public String toString() {
 		return "Cliente [nombre=" + nombre + ", direccion=" + direccion + ", videojuegosComprados="
